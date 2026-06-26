@@ -480,7 +480,7 @@ class RaycastEngine(context: Context) : SurfaceView(context), SurfaceHolder.Call
             }
         }
         // Player dot on minimap
-        val pdx = mmX + (px/currentMap.w)*mmSize; val pdy = mmY + (py/currentMap.h)*mmSize
+        val pdx = (mmX + (px/currentMap.w)*mmSize).toFloat(); val pdy = (mmY + (py/currentMap.h)*mmSize).toFloat()
         canvas.drawCircle(pdx, pdy, 2.5f, Paint().apply { color = Color.GREEN })
         // Player direction
         canvas.drawLine(pdx, pdy, pdx+cos(pangle).toFloat()*5f, pdy+sin(pangle).toFloat()*5f,
