@@ -272,7 +272,13 @@ class RaycastEngine(context: Context) : SurfaceView(context), SurfaceHolder.Call
             drawWeapon(c, W, H)
 
             // Particles
-            for (p in parts) c.drawCircle(p.x, p.y, 3f+p.life/4f, Paint().apply { color=Color.argb(p.life*20,p.col shr 16,(p.col shr 8)&0xFF,p.col&0xFF) })
+            for (p in parts) {
+                val a = (p.life * 20).coerceIn(0, 255)
+                val r = (p.col shr 16) and 0xFF
+                val g = (p.col shr 8) and 0xFF
+                val b = p.col and 0xFF
+                c.drawCircle(p.x, p.y, 3f + p.life / 4f, Paint().apply { color = Color.argb(a, r, g, b) })
+            }
 
             // Darkness overlay
             if (!fl || bat <= 0) {
