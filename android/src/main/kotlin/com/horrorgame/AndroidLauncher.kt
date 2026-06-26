@@ -9,7 +9,7 @@ class AndroidLauncher : AndroidApplication() {
         super.onCreate(savedInstanceState)
         val config = AndroidApplicationConfiguration().apply {
             useAccelerometer = false; useCompass = false; useGyroscope = false
-            useImmersiveMode = true; hideStatusBar = true
+            useImmersiveMode = true
         }
         initialize(HorrorGame(), config)
     }
