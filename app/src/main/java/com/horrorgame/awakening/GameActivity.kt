@@ -2,20 +2,17 @@ package com.horrorgame.awakening
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.horrorgame.awakening.game2d.GameView
+import com.horrorgame.awakening.game3d.RaycastEngine
 
 class GameActivity : AppCompatActivity() {
 
-    private lateinit var gameView: GameView
+    private lateinit var engine: RaycastEngine
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        gameView = GameView(this)
-        setContentView(gameView)
+        engine = RaycastEngine(this)
+        setContentView(engine)
     }
 
-    override fun onBackPressed() {
-        finish()
-    }
+    override fun onBackPressed() { finish() }
 }
