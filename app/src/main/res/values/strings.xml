@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Пробуждение</string>
+    <string name="new_game">Новая игра</string>
+    <string name="continue_game">Продолжить</string>
+    <string name="settings">Настройки</string>
+    <string name="exit">Выход</string>
+    <string name="inventory">Инвентарь</string>
+    <string name="use">Использовать</string>
+    <string name="examine">Осмотреть</string>
+    <string name="drop">Выбросить</string>
+    <string name="back">Назад</string>
+    <string name="save">Сохранить</string>
+    <string name="loading">Загрузка...</string>
+    <string name="game_over">Игра окончена</string>
+    <string name="you_died">Вы погибли</string>
+    <string name="you_escaped">Вы сбежали!</string>
+    <string name="sanity_lost">Рассудок потерян</string>
+    <string name="health">Здоровье</string>
+    <string name="sanity">Рассудок</string>
+    <string name="restart">Начать заново</string>
+</resources>

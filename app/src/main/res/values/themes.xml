@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base horror theme -->
+    <style name="Theme.HorrorAwakening" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blood_red</item>
+        <item name="colorPrimaryVariant">@color/blood_red_dark</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorSecondary">@color/accent_red</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="colorSurface">@color/card_background</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+    </style>
+
+    <!-- Splash theme -->
+    <style name="Theme.HorrorAwakening.Splash" parent="Theme.HorrorAwakening">
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- Typography styles -->
+    <style name="HorrorTitle" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@color/blood_red</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <style name="HorrorSubtitle" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <style name="HorrorBody" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="HorrorButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="backgroundTint">@color/button_background</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="HorrorButton.Danger" parent="HorrorButton">
+        <item name="backgroundTint">@color/blood_red</item>
+    </style>
+
+    <style name="HorrorCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="strokeColor">@color/blood_red_dark</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Dialog theme -->
+    <style name="HorrorDialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:background">@color/card_background</item>
+        <item name="colorPrimary">@color/blood_red</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="buttonBarPositiveButtonStyle">@style/HorrorDialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/HorrorDialogButton.Secondary</item>
+        <item name="android:windowBackground">@color/card_background</item>
+    </style>
+
+    <style name="HorrorDialogButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/blood_red</item>
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <style name="HorrorDialogButton.Secondary" parent="HorrorDialogButton">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+</resources>
