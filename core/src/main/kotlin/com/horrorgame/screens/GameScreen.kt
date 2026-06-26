@@ -14,7 +14,7 @@ class GameScreen(val game: HorrorGame) : Screen, InputProcessor {
 
     // World
     private val W = 80; private val H = 60; private val TS = 32f
-    private val map = Array(H) { IntArray(W) { if (it==0||it==W-1||idx==0||idx==H-1) 1 else 0 } }
+    private val map = Array(H) { y -> IntArray(W) { x -> if (x==0||x==W-1||y==0||y==H-1) 1 else 0 } }
     private var px = 5f * TS; private var py = 5f * TS
     private var pa = 0f // player angle in degrees
     private var hp = 100f; private var san = 100f
