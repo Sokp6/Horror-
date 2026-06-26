@@ -141,9 +141,14 @@ class GameView(ctx: Context) : SurfaceView(ctx), SurfaceHolder.Callback {
         // Bullets
         val bi=bullets.iterator(); while(bi.hasNext()){val b=bi.next();b.x+=b.vx*dt;b.y+=b.vy*dt;b.life-=dt
             if(b.life<=0||map[(b.y/TS).toInt()][(b.x/TS).toInt()]!=0){bi.remove();continue}
-            for(m in mobs){if(sqrt((b.x-m.x)*(b.x-m.x)+(b.y-m.y)*(b.y-m.y))<24f){m.hp--;m.stun=0.35f;bi.remove()
-                for(i in 0..10)parts.add(floatArrayOf(b.x,b.y,(Random.nextFloat()-0.5f)*150f,(Random.nextFloat()-0.5f)*150f,0.35f,1f,0.15f,0.15f))
-                if(m.hp<=0&&m.tp==3){over=true;win=true;msg="БОСС УНИЧТОЖЕН!\nВЫ ПОБЕДИЛИ!"}break}}}
+            for (m in mobs) {
+                val d2 = (b.x-m.x)*(b.x-m.x)+(b.y-m.y)*(b.y-m.y)
+                if (d2 < 24f*24f) { m.hp--; m.stun=0.35f; bi.remove()
+                    for (i in 0..10) parts.add(floatArrayOf(b.x,b.y,(Random.nextFloat()-0.5f)*150f,(Random.nextFloat()-0.5f)*150f,0.35f,1f,0.15f,0.15f))
+                    if (m.hp <= 0 && m.tp == 3) { over=true; win=true; msg="BOSS KILLED"; }
+                    break
+                }
+            }
 
         // Particles
         val pi=parts.iterator(); while(pi.hasNext()){val p=pi.next();p[0]+=p[2]*dt;p[1]+=p[3]*dt;p[4]-=dt;if(p[4]<=0)pi.remove()}
