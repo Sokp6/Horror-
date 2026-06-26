@@ -1,10 +1,8 @@
 name: Build APK
-
 on:
   push:
     branches: [ master ]
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,10 +21,10 @@ jobs:
       - name: Generate wrapper
         run: gradle wrapper
       - name: Build APK
-        run: ./gradlew :android:assembleDebug --stacktrace
+        run: ./gradlew :app:assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: HorrorAwakening-APK
-          path: android/build/outputs/apk/debug/android-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30
