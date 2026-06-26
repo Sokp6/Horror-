@@ -5,14 +5,14 @@ package com.horrorgame.awakening.game
  */
 data class Player(
     val currentRoomId: String = "entrance",
-    val health: Int = 100,
+    var health: Int = 100,
     val maxHealth: Int = 100,
-    val sanity: Int = 100,
+    var sanity: Int = 100,
     val maxSanity: Int = 100,
     val inventory: MutableList<String> = mutableListOf(),
     val visitedRooms: MutableSet<String> = mutableSetOf(),
     val flags: MutableMap<String, Boolean> = mutableMapOf(),
-    val gameTime: Int = 0 // minutes elapsed
+    var gameTime: Int = 0 // minutes elapsed
 ) {
     val isAlive: Boolean get() = health > 0 && sanity > 0
 
