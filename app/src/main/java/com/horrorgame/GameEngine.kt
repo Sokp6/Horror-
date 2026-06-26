@@ -149,6 +149,7 @@ class GameView(ctx: Context) : SurfaceView(ctx), SurfaceHolder.Callback {
                     break
                 }
             }
+        }
 
         // Particles
         val pi=parts.iterator(); while(pi.hasNext()){val p=pi.next();p[0]+=p[2]*dt;p[1]+=p[3]*dt;p[4]-=dt;if(p[4]<=0)pi.remove()}
