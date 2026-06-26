@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!129 &1
+PlayerSettings:
+  androidTargetSdkVersion: 34
+  androidMinSdkVersion: 24
+  productName: Horror Awakening
+  applicationIdentifier: com.horrorgame.awakening
+  bundleVersion: 3.5.0
+  defaultScreenOrientation: 4
+  allowedAutorotateToPortrait: 1
+  allowedAutorotateToPortraitUpsideDown: 0
+  allowedAutorotateToLandscapeRight: 1
+  allowedAutorotateToLandscapeLeft: 1
+  use32BitDisplayBuffer: 1
+  disableDepthAndStencilBuffers: 0
+  androidBlitType: 0
+  defaultIsNativeResolution: 1
+  stripEngineCode: 1
+  androidSupportedAspectRatio: 1
+  AndroidTargetArchitectures: 2
+  AndroidBuildApkPerCpuArchitecture: 0
+  m_BuildTargetGraphicsAPIs:
+  - OpenGLES3: 2
+  - OpenGLES2: 1
